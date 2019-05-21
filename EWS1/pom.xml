@@ -36,8 +36,9 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.16</version>
+      <version>5.1.47</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -118,6 +119,7 @@
           <include>**/*.properties</include>
           <include>**/*.xml</include>
         </includes>
+        <filtering>true</filtering>
       </resource>
     </resources>
   </build>
