@@ -5,7 +5,7 @@
         select * from tb_user where uname=#{uname} and upwd=md5(#{upwd});
     </select>
     <insert id="register" parameterType="map" >
-        insert into tb_user(id,uname,upwd,email,role,registerTime,lastLoginTime)
+        insert into tb_user(id,uname,upwd,email,role,registerTime,lastLogin)
         values(null,#{uname},md5(#{upwd}),#{email},'employee',now(),now());
     </insert>
 </mapper>

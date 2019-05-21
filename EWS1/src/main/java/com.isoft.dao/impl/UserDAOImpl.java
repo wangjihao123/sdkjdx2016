@@ -30,9 +30,23 @@ public class UserDAOImpl implements IUserDAO {
             return "fault";
     }
 
+//    @Override
+//    public boolean register(String uname, String upwd, String email) {
+//        System.out.println(email);
+//        return true;
+//    }
     @Override
     public boolean register(String uname, String upwd, String email) {
-        System.out.println(email);
-        return true;
+        SqlSession sqlSession = sessionFactoryBean.openSession(true);
+        String statement ="com.isoft.mapping.userMapper.register";
+        Map map=new HashMap();
+        map.put("uname",uname);
+        map.put("upwd",upwd);
+        map.put("email",email);
+        int i=sqlSession.insert(statement,map);
+        if(i>0)
+            return true;
+        else
+            return false;
     }
 }
