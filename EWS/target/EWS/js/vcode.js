@@ -1,8 +1,7 @@
 //生成验证码的方法
 var code="";
 function createCode(length) {
-
-    this.code = "";
+     this.code = "";
     var codeLength = parseInt(length); //验证码的长度
     var checkCode = document.getElementById("checkCode");
     ////所有候选组成验证码的字符，当然也可以用中文的

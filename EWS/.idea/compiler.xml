@@ -9,8 +9,5 @@
         <module name="EWS" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="EWS" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
